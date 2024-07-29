@@ -1,37 +1,96 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Registration</title>
-   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .link-spacing {
+            margin-right: 15px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
->  
-    <hr>
-    <h1>Registration Page </h1>
-
-    
-        <label for="name">Name&nbsp;&nbsp;:</label>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email&nbsp;&nbsp;:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="mobile no">Mobile&nbsp;&nbsp;:</label>
-        <input type="mobile no" id="mobile no" name="mobile no" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        </select><br>
-
-        <input type="submit" value="Submit">
-        <br>
-
-        <a href="register.html" style="font-size: 15px;" class="link-spacing" ></a> <a href="login.html" style="font-size: 15px;"> Login if registred</a>
+<body>
+    <div class="container">
+        <h1>Registration Page</h1>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="submit" value="Submit">
         </form>
-
-
-     </div>
+        <br>
+        <a href="register.html" class="link-spacing">Register</a>
+        <a href="login.html">Login if registered</a>
+    </div>
 </body>
-
 </html>
