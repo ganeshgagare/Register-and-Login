@@ -1,28 +1,94 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Login</title>
-    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .link-spacing {
+            margin-right: 15px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-    
-    <hr>
-    <h1>Login Page </h1>
-
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+        <form action="/submit-login" method="post">
             <label for="name">Username:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Email Ad:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <input type="submit" value="Submit" >
-            <br>
-            <a href="login.html" style="font-size: 15px;" class="link-spacing" ></a> <a href="register.html" style="font-size: 15px;"> register</a>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="submit" value="Submit">
         </form>
+        <br>
+        <a href="login.html" class="link-spacing"></a> 
+        <a href="register.html">Register</a>
     </div>
 </body>
-
 </html>
